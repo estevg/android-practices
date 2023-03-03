@@ -31,7 +31,7 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/DataStore"
+        android:id="@+id/dataStoreView"
         android:textColorHint="@color/white"
         android:hint="@string/datastore_preferences_alternative_to_shareredpreferences"
         android:layout_width="match_parent"

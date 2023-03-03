@@ -3,6 +3,7 @@ package com.example.estudioandroid
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.estudioandroid.dataStore.DataStore
 import com.example.estudioandroid.sharedPreferences.SharedPreferences
 import com.example.estudioandroid.databinding.ActivityMainBinding
 import com.example.estudioandroid.navigateActivity.MainNavigate
@@ -18,18 +19,22 @@ class MainActivity : AppCompatActivity() {
 
         val btnSharedPreferences = binding.sharedPreferences
         val btnNavigateActivity = binding.NavigateActivity
+        val btnDataStore = binding.dataStoreView
 
+        btnDataStore.setOnClickListener { navigateDataStore() }
         btnNavigateActivity.setOnClickListener { navigateActivity() }
         btnSharedPreferences.setOnClickListener { navigateSharedPreferences() }
     }
 
+    private fun navigateDataStore() {
+        startActivity(Intent(this, DataStore::class.java))
+    }
+
     private fun navigateSharedPreferences (){
-        val intent = Intent(this, SharedPreferences::class.java)
-        startActivity(intent)
+        startActivity(Intent(this, SharedPreferences::class.java))
     }
 
     private fun navigateActivity (){
-        val intent = Intent(this, MainNavigate::class.java)
-        startActivity(intent)
+        startActivity(Intent(this, MainNavigate::class.java))
     }
 }
