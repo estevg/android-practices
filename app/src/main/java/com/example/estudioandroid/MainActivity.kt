@@ -7,6 +7,7 @@ import com.example.estudioandroid.dataStore.DataStore
 import com.example.estudioandroid.sharedPreferences.SharedPreferences
 import com.example.estudioandroid.databinding.ActivityMainBinding
 import com.example.estudioandroid.navigateActivity.MainNavigate
+import com.example.estudioandroid.services.ServiceActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,10 +21,17 @@ class MainActivity : AppCompatActivity() {
         val btnSharedPreferences = binding.sharedPreferences
         val btnNavigateActivity = binding.NavigateActivity
         val btnDataStore = binding.dataStoreView
+        val btnServices = binding.btnService
 
+        btnServices.setOnClickListener { navigateService() }
         btnDataStore.setOnClickListener { navigateDataStore() }
         btnNavigateActivity.setOnClickListener { navigateActivity() }
         btnSharedPreferences.setOnClickListener { navigateSharedPreferences() }
+
+    }
+
+    private fun navigateService() {
+        startActivity(Intent(this, ServiceActivity::class.java))
     }
 
     private fun navigateDataStore() {

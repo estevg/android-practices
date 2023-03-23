@@ -39,6 +39,13 @@
 
 
     <Button
+        android:id="@+id/btnService"
+        android:textColorHint="@color/white"
+        android:hint="Services"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
         android:id="@+id/MovieApp"
         android:textColorHint="@color/white"
         android:hint="MovieApp"
