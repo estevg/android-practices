@@ -3,6 +3,7 @@ package com.example.estudioandroid
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.estudioandroid.broadcastReceiver.BroadcastReceiver
 import com.example.estudioandroid.dataStore.DataStore
 import com.example.estudioandroid.sharedPreferences.SharedPreferences
 import com.example.estudioandroid.databinding.ActivityMainBinding
@@ -22,12 +23,19 @@ class MainActivity : AppCompatActivity() {
         val btnNavigateActivity = binding.NavigateActivity
         val btnDataStore = binding.dataStoreView
         val btnServices = binding.btnService
+        val btnBroadcastReceiver = binding.btnBroadCastReceiver
 
+
+        btnBroadcastReceiver.setOnClickListener { navigateBroadCast() }
         btnServices.setOnClickListener { navigateService() }
         btnDataStore.setOnClickListener { navigateDataStore() }
         btnNavigateActivity.setOnClickListener { navigateActivity() }
         btnSharedPreferences.setOnClickListener { navigateSharedPreferences() }
 
+    }
+
+    private fun navigateBroadCast() {
+        startActivity(Intent(this, BroadcastReceiver::class.java))
     }
 
     private fun navigateService() {
