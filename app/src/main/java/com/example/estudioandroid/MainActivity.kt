@@ -3,6 +3,7 @@ package com.example.estudioandroid
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.estudioandroid.alertDialog.AlertDialogActivity
 import com.example.estudioandroid.broadcastReceiver.BroadcastReceiver
 import com.example.estudioandroid.dataStore.DataStore
 import com.example.estudioandroid.sharedPreferences.SharedPreferences
@@ -26,15 +27,21 @@ class MainActivity : AppCompatActivity() {
         val btnServices = binding.btnService
         val btnBroadcastReceiver = binding.btnBroadCastReceiver
         val btnSuperBase = binding.btnSuperBase
+        val btnDialog = binding.btnDialog
+
 
         btnSuperBase.setOnClickListener { navigateSuperBase() }
-
+        btnDialog.setOnClickListener { navigateDialog() }
         btnBroadcastReceiver.setOnClickListener { navigateBroadCast() }
         btnServices.setOnClickListener { navigateService() }
         btnDataStore.setOnClickListener { navigateDataStore() }
         btnNavigateActivity.setOnClickListener { navigateActivity() }
         btnSharedPreferences.setOnClickListener { navigateSharedPreferences() }
 
+    }
+
+    private fun navigateDialog() {
+        startActivity(Intent(this, AlertDialogActivity::class.java))
     }
 
     private fun navigateSuperBase() {
