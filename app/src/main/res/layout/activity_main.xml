@@ -53,6 +53,13 @@
         android:layout_height="wrap_content" />
 
     <Button
+        android:id="@+id/btnSuperBase"
+        android:textColorHint="@color/white"
+        android:hint="SuperBase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
         android:id="@+id/MovieApp"
         android:textColorHint="@color/white"
         android:hint="MovieApp"

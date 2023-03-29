@@ -9,6 +9,7 @@ import com.example.estudioandroid.sharedPreferences.SharedPreferences
 import com.example.estudioandroid.databinding.ActivityMainBinding
 import com.example.estudioandroid.navigateActivity.MainNavigate
 import com.example.estudioandroid.services.ServiceActivity
+import com.example.estudioandroid.superbase.MainActivitySuperBase
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,7 +25,9 @@ class MainActivity : AppCompatActivity() {
         val btnDataStore = binding.dataStoreView
         val btnServices = binding.btnService
         val btnBroadcastReceiver = binding.btnBroadCastReceiver
+        val btnSuperBase = binding.btnSuperBase
 
+        btnSuperBase.setOnClickListener { navigateSuperBase() }
 
         btnBroadcastReceiver.setOnClickListener { navigateBroadCast() }
         btnServices.setOnClickListener { navigateService() }
@@ -32,6 +35,10 @@ class MainActivity : AppCompatActivity() {
         btnNavigateActivity.setOnClickListener { navigateActivity() }
         btnSharedPreferences.setOnClickListener { navigateSharedPreferences() }
 
+    }
+
+    private fun navigateSuperBase() {
+        startActivity(Intent(this, MainActivitySuperBase::class.java))
     }
 
     private fun navigateBroadCast() {
