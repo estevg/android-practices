@@ -2,82 +2,160 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:paddingHorizontal="20dp"
-    android:layout_marginHorizontal="20dp"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
+
+
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/NavigateActivity"
-        android:textColorHint="@color/white"
-        android:hint="@string/navigate_activity"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:hint="@string/navigate_activity"
+        android:textAlignment="textStart"
+        android:textColorHint="@color/purple_500" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/Fragment"
-        android:textColorHint="@color/white"
-        android:hint="@string/navigate_fragment"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:hint="@string/navigate_fragment"
+        android:textAlignment="textStart"
+        android:textColorHint="@color/purple_500"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/sharedPreferences"
-        android:textColorHint="@color/white"
-        android:hint="@string/sharedpreferences"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/sharedpreferences"
+        android:background="@color/transparent"
+        android:textAlignment="textStart"
+        android:textColorHint="@color/purple_500" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/dataStoreView"
-        android:textColorHint="@color/white"
-        android:hint="@string/datastore_preferences_alternative_to_shareredpreferences"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:hint="@string/datastore_preferences_alternative_to_shareredpreferences"
+        android:background="@color/transparent"
+        android:textAlignment="textStart"
+        android:textColorHint="@color/purple_500" />
 
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/btnService"
-        android:textColorHint="@color/white"
-        android:hint="Services"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Services"
+        android:background="@color/transparent"
+        android:textAlignment="textStart"
+        android:textColorHint="@color/purple_500" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/btnBroadCastReceiver"
-        android:textColorHint="@color/white"
-        android:hint="BroadcastReceiver"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="BroadcastReceiver"
+        android:background="@color/transparent"
+        android:textAlignment="textStart"
+        android:textColorHint="@color/purple_500" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/btnSuperBase"
-        android:textColorHint="@color/white"
-        android:hint="SuperBase"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="SuperBase"
+        android:background="@color/transparent"
+        android:textAlignment="textStart"
+        android:textColorHint="@color/purple_500" />
+
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/btnDialog"
-        android:textColorHint="@color/white"
-        android:hint="Dialog"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Dialog"
+        android:background="@color/transparent"
+        android:textAlignment="textStart"
+        android:textColorHint="@color/purple_500" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/MovieApp"
-        android:textColorHint="@color/white"
-        android:hint="MovieApp"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="MovieApp"
+        android:background="@color/transparent"
+        android:textAlignment="textStart"
+        android:textColorHint="@color/purple_500"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/ViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ViewPager"
+        android:background="@color/transparent"
+        android:textAlignment="textStart"
+        android:textColorHint="@color/purple_500" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/BlogApp"
-        android:textColorHint="@color/white"
-        android:hint="BlogApp"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="BlogApp"
+        android:background="@color/transparent"
+        android:textAlignment="textStart"
+        android:textColorHint="@color/purple_500" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
 

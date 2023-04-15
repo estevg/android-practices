@@ -17,6 +17,14 @@
         android:theme="@style/Theme.EstudioAndroid"
         tools:targetApi="31">
         <activity
+            android:theme="@style/Theme.EstudioAndroid.ViewPager"
+            android:name=".viewPager2.ViewPagerActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".alertDialog.AlertDialogActivity"
             android:exported="false">
             <meta-data

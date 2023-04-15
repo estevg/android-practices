@@ -11,6 +11,7 @@ import com.example.estudioandroid.databinding.ActivityMainBinding
 import com.example.estudioandroid.navigateActivity.MainNavigate
 import com.example.estudioandroid.services.ServiceActivity
 import com.example.estudioandroid.superbase.MainActivitySuperBase
+import com.example.estudioandroid.viewPager2.ViewPagerActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,8 +29,10 @@ class MainActivity : AppCompatActivity() {
         val btnBroadcastReceiver = binding.btnBroadCastReceiver
         val btnSuperBase = binding.btnSuperBase
         val btnDialog = binding.btnDialog
+        val viewPager = binding.ViewPager
 
 
+        viewPager.setOnClickListener { navigateViewPager() }
         btnSuperBase.setOnClickListener { navigateSuperBase() }
         btnDialog.setOnClickListener { navigateDialog() }
         btnBroadcastReceiver.setOnClickListener { navigateBroadCast() }
@@ -38,6 +41,10 @@ class MainActivity : AppCompatActivity() {
         btnNavigateActivity.setOnClickListener { navigateActivity() }
         btnSharedPreferences.setOnClickListener { navigateSharedPreferences() }
 
+    }
+
+    private fun navigateViewPager() {
+        startActivity(Intent(this, ViewPagerActivity::class.java))
     }
 
     private fun navigateDialog() {
