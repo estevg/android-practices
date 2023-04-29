@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/material_dynamic_primary100"
+    android:layout_height="match_parent">
+
+    <ImageView
+
+        android:id="@+id/ivLoginLogo"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="120dp"
+        android:id="@+id/etLoginUser"
+        android:drawablePadding="12dp"
+        android:drawableStart="@drawable/ic_baseline_person_24"
+        android:hint="@string/hint_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="180dp"
+        android:id="@+id/etLoginPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="password"
+        android:drawableStart="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="12dp"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword"
+        android:minHeight="48dp" />
+
+
+    <Button
+        android:layout_gravity="bottom"
+        android:layout_margin="12dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/button_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</FrameLayout>

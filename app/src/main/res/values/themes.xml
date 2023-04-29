@@ -25,4 +25,11 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">#0E1213</item>
     </style>
+
+    <style name="Theme.AppCompat.EditTextStyle">
+        <item name="android:color">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:textColorHint">@color/black</item>
+    </style>
 </resources>

@@ -9,6 +9,9 @@
     <color name="white">#FFFFFF</color>
     <color name="transparent">#00FFFFFF</color>
 
+    <color name="colorPrimary">#8BC34A</color>
+    <color name="colorPrimaryDark">#689F38</color>
+    <color name="colorAccent">#085494</color>
 
     <color name="red400">#EF5350</color>
     <color name="teala200">#64FFDA</color>
