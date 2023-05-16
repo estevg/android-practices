@@ -14,4 +14,6 @@
     <string name="hint_user">User</string>
     <string name="hint_password">password</string>
     <string name="button_login">LOGIN</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
