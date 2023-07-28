@@ -6,13 +6,13 @@
     tools:context=".permisos.AuthorizationsFragment">
 
     <Button
-        android:layout_gravity="center"
-        style="@style/Widget.Material3.Button.ElevatedButton"
         android:id="@+id/btnPerm"
+        style="@style/Widget.Material3.Button.ElevatedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
+        android:layout_gravity="center"
         android:text="Permiso"
-        />
+        android:textSize="20dp" />
+
 
 </FrameLayout>

@@ -9,6 +9,7 @@ import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import com.example.estudioandroid.alertDialog.AlertDialogActivity
 import com.example.estudioandroid.broadcastReceiver.BroadcastReceiver
+import com.example.estudioandroid.camerax.FragmentCamerax
 import com.example.estudioandroid.dataStore.DataStore
 import com.example.estudioandroid.databinding.FragmentMainBinding
 import com.example.estudioandroid.navigateActivity.MainNavigate
@@ -37,6 +38,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         val btnDialog = binding.btnDialog
         val viewPager = binding.ViewPager
         val btnPerm = binding.Perm
+        val btnCamera = binding.camera
 
         viewPager.setOnClickListener { navigateViewPager() }
         btnSuperBase.setOnClickListener { navigateSuperBase() }
@@ -47,6 +49,14 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         btnNavigateActivity.setOnClickListener { navigateActivity() }
         btnSharedPreferences.setOnClickListener { navigateSharedPreferences() }
         btnPerm.setOnClickListener { navigatePerm() }
+        btnCamera.setOnClickListener { navigateCameraFragment() }
+    }
+
+    private fun navigateCameraFragment() {
+        requireActivity().supportFragmentManager.commit {
+            replace(R.id.fragment_container_view, FragmentCamerax())
+            addToBackStack("camera")
+        }
     }
 
 
