@@ -10,7 +10,7 @@
     <string name="hello_android">Hello Android</string>
     <string name="navigate_to_the_first_activity">Navigate to the first activity</string>
     <string name="navigate_activity">Navigate Activity</string>
-    <string name="navigate_fragment">Navigate Fragment</string>
+    <string name="navigate_exoplayer">ExoPlayer</string>
     <string name="hint_user">User</string>
     <string name="hint_password">password</string>
     <string name="button_login">LOGIN</string>

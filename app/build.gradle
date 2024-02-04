@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace 'com.example.estudioandroid'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.estudioandroid"
@@ -71,6 +71,11 @@ dependencies {
     implementation "androidx.camera:camera-extensions:1.2.3"
 
     // End Camera X
+
+    // AndroidX Media3
+    implementation "androidx.media3:media3-exoplayer:1.2.1"
+    implementation "androidx.media3:media3-exoplayer-dash:1.2.1"
+    implementation "androidx.media3:media3-ui:1.2.1"
 
     implementation 'androidx.core:core-ktx:1.10.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'

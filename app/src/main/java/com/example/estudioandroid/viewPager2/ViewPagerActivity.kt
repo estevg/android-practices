@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
-import androidx.viewpager2.widget.ViewPager2
 import com.example.estudioandroid.R
+import com.example.estudioandroid.common.Board
 import com.example.estudioandroid.databinding.ActivityViewPagerBinding
 
 class ViewPagerActivity : AppCompatActivity(), ViewPagerAdapter.OnItemSelect {
@@ -64,9 +64,8 @@ class ViewPagerActivity : AppCompatActivity(), ViewPagerAdapter.OnItemSelect {
             )
         )
 
-        val viewPager = binding.viewPager
 
-        viewPager.adapter = ViewPagerAdapter(boardList, this@ViewPagerActivity)
+        binding.viewPager.adapter = ViewPagerAdapter(boardList, this@ViewPagerActivity)
         /*viewPager.orientation = ViewPager2.ORIENTATION_VERTICAL*/
         /*viewPager.layoutDirection = ViewPager2.LAYOUT_DIRECTION_INHERIT*/
     }
@@ -78,4 +77,6 @@ class ViewPagerActivity : AppCompatActivity(), ViewPagerAdapter.OnItemSelect {
             binding.viewPager.setCurrentItem((position + 1), true)
         }
     }
+
+
 }

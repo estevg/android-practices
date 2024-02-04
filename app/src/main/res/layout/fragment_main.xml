@@ -24,11 +24,11 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/Fragment"
+        android:id="@+id/Video"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/transparent"
-        android:hint="@string/navigate_fragment"
+        android:hint="@string/navigate_exoplayer"
         android:textAlignment="textStart"
         android:textColorHint="@color/purple_500" />
 
@@ -116,11 +116,11 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/MovieApp"
+        android:id="@+id/MediaPlayer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/transparent"
-        android:hint="MovieApp"
+        android:hint="Media Player"
         android:textAlignment="textStart"
         android:textColorHint="@color/purple_500" />
 
@@ -134,6 +134,15 @@
         android:layout_height="wrap_content"
         android:background="@color/transparent"
         android:hint="ViewPager"
+        android:textAlignment="textStart"
+        android:textColorHint="@color/purple_500" />
+
+    <Button
+        android:id="@+id/ViewPagerWithVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:hint="ViewPager with video"
         android:textAlignment="textStart"
         android:textColorHint="@color/purple_500" />
 

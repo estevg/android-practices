@@ -6,36 +6,43 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvA"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:backgroundTint="@color/colorAccent"
-        android:layout_width="100dp"
-        android:layout_height="200dp" />
+        android:backgroundTint="@color/colorAccent" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cvB"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:id="@+id/cvB"
-        android:backgroundTint="@color/colorPrimary"
-        android:layout_width="100dp"
-        android:layout_height="100dp" />
+        android:backgroundTint="@color/colorPrimary" />
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cvC"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_below="@+id/cvA"
         android:layout_alignParentStart="true"
-        android:id="@+id/cvC"
-        android:backgroundTint="@color/material_dynamic_tertiary20"
+        android:backgroundTint="@color/material_dynamic_tertiary20" />
+
+    <androidx.cardview.widget.CardView
         android:layout_width="200dp"
-        android:layout_height="200dp" />
+        android:layout_height="150dp"
+        android:layout_below="@+id/cvC"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/material_dynamic_tertiary20" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvD"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:backgroundTint="@color/material_dynamic_primary30"
-        android:layout_width="100dp"
-        android:layout_height="100dp" />
+        android:backgroundTint="@color/material_dynamic_primary30" />
 
 </RelativeLayout>

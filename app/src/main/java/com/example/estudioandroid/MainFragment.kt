@@ -12,6 +12,8 @@ import com.example.estudioandroid.broadcastReceiver.BroadcastReceiver
 import com.example.estudioandroid.camerax.FragmentCamerax
 import com.example.estudioandroid.dataStore.DataStore
 import com.example.estudioandroid.databinding.FragmentMainBinding
+import com.example.estudioandroid.exoplayer.ExoPlayerFragment
+import com.example.estudioandroid.mediaplayer.MediaPlayerFragment
 import com.example.estudioandroid.navigateActivity.MainNavigate
 import com.example.estudioandroid.permisos.AuthorizationsFragment
 import com.example.estudioandroid.permisos.PermissionRequester
@@ -19,6 +21,7 @@ import com.example.estudioandroid.services.ServiceActivity
 import com.example.estudioandroid.sharedPreferences.SharedPreferences
 import com.example.estudioandroid.superbase.MainActivitySuperBase
 import com.example.estudioandroid.viewPager2.ViewPagerActivity
+import com.example.estudioandroid.viewPagerWithVideo.ViewPagerWithVideoFragment
 
 
 class MainFragment : Fragment(R.layout.fragment_main) {
@@ -29,33 +32,46 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentMainBinding.bind(view)
 
-        val btnSharedPreferences = binding.sharedPreferences
-        val btnNavigateActivity = binding.NavigateActivity
-        val btnDataStore = binding.dataStoreView
-        val btnServices = binding.btnService
-        val btnBroadcastReceiver = binding.btnBroadCastReceiver
-        val btnSuperBase = binding.btnSuperBase
-        val btnDialog = binding.btnDialog
-        val viewPager = binding.ViewPager
-        val btnPerm = binding.Perm
-        val btnCamera = binding.camera
+        binding.ViewPager.setOnClickListener { navigateViewPager() }
+        binding.btnSuperBase.setOnClickListener { navigateSuperBase() }
+        binding.btnDialog.setOnClickListener { navigateDialog() }
+        binding.btnBroadCastReceiver.setOnClickListener { navigateBroadCast() }
+        binding.btnService.setOnClickListener { navigateService() }
+        binding.dataStoreView.setOnClickListener { navigateDataStore() }
+        binding.NavigateActivity.setOnClickListener { navigateActivity() }
+        binding.sharedPreferences.setOnClickListener { navigateSharedPreferences() }
+        binding.Perm.setOnClickListener { navigatePerm() }
+        binding.camera.setOnClickListener { navigateCameraFragment() }
+        binding.Video.setOnClickListener { navigateVideo() }
+        binding.ViewPagerWithVideo.setOnClickListener { navigateViewPagerWithVideo() }
+        binding.MediaPlayer.setOnClickListener { navigateMediaPlayer() }
+    }
 
-        viewPager.setOnClickListener { navigateViewPager() }
-        btnSuperBase.setOnClickListener { navigateSuperBase() }
-        btnDialog.setOnClickListener { navigateDialog() }
-        btnBroadcastReceiver.setOnClickListener { navigateBroadCast() }
-        btnServices.setOnClickListener { navigateService() }
-        btnDataStore.setOnClickListener { navigateDataStore() }
-        btnNavigateActivity.setOnClickListener { navigateActivity() }
-        btnSharedPreferences.setOnClickListener { navigateSharedPreferences() }
-        btnPerm.setOnClickListener { navigatePerm() }
-        btnCamera.setOnClickListener { navigateCameraFragment() }
+
+    private fun navigateMediaPlayer() {
+        requireActivity().supportFragmentManager.commit {
+            replace(R.id.fragment_container_view, MediaPlayerFragment())
+            addToBackStack(null)
+        }
+    }
+    private fun navigateViewPagerWithVideo() {
+        requireActivity().supportFragmentManager.commit {
+            replace(R.id.fragment_container_view, ViewPagerWithVideoFragment())
+            addToBackStack(null)
+        }
+    }
+
+    private fun navigateVideo() {
+        requireActivity().supportFragmentManager.commit {
+            replace(R.id.fragment_container_view, ExoPlayerFragment())
+            addToBackStack(null)
+        }
     }
 
     private fun navigateCameraFragment() {
         requireActivity().supportFragmentManager.commit {
             replace(R.id.fragment_container_view, FragmentCamerax())
-            addToBackStack("camera")
+            addToBackStack(null)
         }
     }
 
@@ -63,7 +79,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     private fun navigatePerm() {
         requireActivity().supportFragmentManager.commit {
             replace(R.id.fragment_container_view, AuthorizationsFragment())
-            addToBackStack("permisos")
+            addToBackStack(null)
         }
     }
 
@@ -91,11 +107,11 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         startActivity(Intent(requireContext(), DataStore::class.java))
     }
 
-    private fun navigateSharedPreferences (){
+    private fun navigateSharedPreferences() {
         startActivity(Intent(requireContext(), SharedPreferences::class.java))
     }
 
-    private fun navigateActivity (){
+    private fun navigateActivity() {
         startActivity(Intent(requireContext(), MainNavigate::class.java))
     }
 }

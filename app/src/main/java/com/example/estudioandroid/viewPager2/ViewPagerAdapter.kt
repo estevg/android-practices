@@ -5,13 +5,14 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.estudioandroid.common.Board
 import com.example.estudioandroid.core.BaseViewHolder
 import com.example.estudioandroid.databinding.BoardItemBinding
 
 class ViewPagerAdapter(
     private val boardList: List<Board>,
     private val onItemSelect: OnItemSelect
-):
+) :
     RecyclerView.Adapter<BaseViewHolder<*>>() {
 
     interface OnItemSelect {
@@ -19,7 +20,8 @@ class ViewPagerAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<*> {
-        val itemBinding = BoardItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val itemBinding =
+            BoardItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return BoardViewHolder(itemBinding, parent.context)
     }
 
@@ -32,32 +34,25 @@ class ViewPagerAdapter(
     override fun getItemCount(): Int = boardList.size
 
     private inner class BoardViewHolder(
-        binding: BoardItemBinding,
+        val binding: BoardItemBinding,
         val context: Context
-    ): BaseViewHolder<Board>(binding.root){
-        private val container = binding.container
-        private val image = binding.ivImage
-        private val title = binding.txtTitle
-        private val description = binding.txtSubtitle
-        private val button = binding.btnNext
-
+    ) : BaseViewHolder<Board>(binding.root) {
 
         override fun bin(item: Board) {
-            container.background = ContextCompat.getDrawable(context, item.background)
-            image.setImageResource(item.image)
-            title.text = item.title
-            description.text = item.description
+            binding.container.background = ContextCompat.getDrawable(context, item.background)
+            binding.ivImage.setImageResource(item.image)
+            binding.txtTitle.text = item.title
+            binding.txtSubtitle.text = item.description
 
-            if (adapterPosition == boardList.size - 1){
-                button.text = "Finalizar"
+            if (bindingAdapterPosition == boardList.size - 1) {
+                binding.btnNext.text = "Finalizar"
             }
 
-            button.setOnClickListener {
+            binding.btnNext.setOnClickListener {
                 onItemSelect.onClickListener(adapterPosition)
             }
         }
     }
-
 
 
 }
