@@ -6,7 +6,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import com.example.estudioandroid.alertDialog.AlertDialogActivity
-import com.example.estudioandroid.broadcastReceiver.BroadcastReceiver
+import com.example.estudioandroid.broadcastReceiver.BroadcastTopic
 import com.example.estudioandroid.camerax.FragmentCamerax
 import com.example.estudioandroid.dataStore.DataStore
 import com.example.estudioandroid.databinding.FragmentMainBinding
@@ -32,7 +32,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         binding.ViewPager.setOnClickListener { navigateViewPager() }
         binding.btnSuperBase.setOnClickListener { navigateSuperBase() }
         binding.btnDialog.setOnClickListener { navigateDialog() }
-        binding.btnBroadCastReceiver.setOnClickListener { navigateBroadCast() }
+        binding.btnBroadCastReceiver.setOnClickListener { navigateBroadcastTopic() }
         binding.btnService.setOnClickListener { navigateService() }
         binding.dataStoreView.setOnClickListener { navigateDataStore() }
         binding.NavigateActivity.setOnClickListener { navigateActivity() }
@@ -93,8 +93,8 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         startActivity(Intent(requireContext(), MainActivitySuperBase::class.java))
     }
 
-    private fun navigateBroadCast() {
-        startActivity(Intent(requireContext(), BroadcastReceiver::class.java))
+    private fun navigateBroadcastTopic() {
+        startActivity(Intent(requireContext(), BroadcastTopic::class.java))
     }
 
     private fun navigateService() {

@@ -7,36 +7,28 @@ import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.net.wifi.WifiManager
 import android.os.BatteryManager
-import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.estudioandroid.R
-import com.example.estudioandroid.databinding.ActivityBroadcastReceiverBinding
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.runBlocking
+import com.example.estudioandroid.databinding.ActivityBroadcastTopicBinding
 
-class BroadcastReceiver : AppCompatActivity() {
+class BroadcastTopic : AppCompatActivity() {
 
-    lateinit var binding: ActivityBroadcastReceiverBinding
+    lateinit var binding: ActivityBroadcastTopicBinding
 
     private lateinit var connectManager: ConnectivityManager
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityBroadcastReceiverBinding.inflate(layoutInflater)
+        binding = ActivityBroadcastTopicBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        connectManager = applicationContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        connectManager =
+            applicationContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 
     }
-
-
-
 
     override fun onResume() {
         super.onResume()
@@ -80,14 +72,14 @@ class BroadcastReceiver : AppCompatActivity() {
                 if (isAirplaneMode) {
                     binding.imagePlanet.setImageDrawable(
                         ContextCompat.getDrawable(
-                            this@BroadcastReceiver,
+                            this@BroadcastTopic,
                             R.drawable.ic_baseline_local_airport_24
                         )
                     )
                 } else {
                     binding.imagePlanet.setImageDrawable(
                         ContextCompat.getDrawable(
-                            this@BroadcastReceiver,
+                            this@BroadcastTopic,
                             R.drawable.ic_baseline_airplanemode_inactive_24
                         )
                     )
@@ -108,9 +100,11 @@ class BroadcastReceiver : AppCompatActivity() {
                     WifiManager.WIFI_STATE_ENABLED -> {
                         binding.txtWifi.text = "Wifi: Activo"
                     }
+
                     WifiManager.WIFI_STATE_DISABLED -> {
                         binding.txtWifi.text = "Wifi: Desactivado"
                     }
+
                     WifiManager.WIFI_STATE_UNKNOWN -> {
                         binding.txtWifi.text = "Wifi: Error"
                     }

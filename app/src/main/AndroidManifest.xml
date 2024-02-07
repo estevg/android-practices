@@ -12,9 +12,9 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.camera.any" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
-
 
 
     <application
@@ -52,7 +52,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".broadcastReceiver.BroadcastReceiver"
+            android:name=".broadcastReceiver.BroadcastTopic"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
