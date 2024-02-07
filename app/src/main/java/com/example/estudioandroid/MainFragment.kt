@@ -2,11 +2,9 @@ package com.example.estudioandroid
 
 import android.content.Intent
 import android.os.Bundle
-import android.text.TextUtils.replace
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
-import androidx.fragment.app.replace
 import com.example.estudioandroid.alertDialog.AlertDialogActivity
 import com.example.estudioandroid.broadcastReceiver.BroadcastReceiver
 import com.example.estudioandroid.camerax.FragmentCamerax
@@ -15,8 +13,7 @@ import com.example.estudioandroid.databinding.FragmentMainBinding
 import com.example.estudioandroid.exoplayer.ExoPlayerFragment
 import com.example.estudioandroid.mediaplayer.MediaPlayerFragment
 import com.example.estudioandroid.navigateActivity.MainNavigate
-import com.example.estudioandroid.permisos.AuthorizationsFragment
-import com.example.estudioandroid.permisos.PermissionRequester
+import com.example.estudioandroid.permits.AuthorizationsFragment
 import com.example.estudioandroid.services.ServiceActivity
 import com.example.estudioandroid.sharedPreferences.SharedPreferences
 import com.example.estudioandroid.superbase.MainActivitySuperBase
@@ -54,6 +51,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             addToBackStack(null)
         }
     }
+
     private fun navigateViewPagerWithVideo() {
         requireActivity().supportFragmentManager.commit {
             replace(R.id.fragment_container_view, ViewPagerWithVideoFragment())

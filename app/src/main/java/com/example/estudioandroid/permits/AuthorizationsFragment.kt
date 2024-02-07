@@ -1,4 +1,4 @@
-package com.example.estudioandroid.permisos
+package com.example.estudioandroid.permits
 
 import android.Manifest
 import android.os.Build

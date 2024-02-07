@@ -18,7 +18,7 @@
 
 
     <application
-        android:name=".MainApplication"
+        android:name=".MainApp"
         android:allowBackup="true"
         android:usesCleartextTraffic="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
